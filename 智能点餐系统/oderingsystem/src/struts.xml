@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="OrderingSystem" extends="struts-default" namespace="/">
+
+
+		<!--菜单操作 -->
+		
+		<action name="tologin" class="IndexAction" method="tologin">			
+			<result name="waiter">/WEB-INF/pages/waiter/Waiter_login.jsp</result>
+			<result name="manager">/WEB-INF/pages/manager/Manage_login.jsp</result>
+			<result name="dtree">/dtree/dtreetop.jsp</result>			
+			<result name="managerdtree">/WEB-INF/pages/manager/managerdtree.jsp</result>
+			<result name="waiterdtree">/WEB-INF/pages/waiter/waiterdtree.jsp</result>
+			<result name="waiteraddmsg">/WEB-INF/pages/manager/waiteraddmsg.jsp</result>			
+			<result name="foodaddmsg">/WEB-INF/pages/manager/foodaddmsg.jsp</result>
+			<result name="AddTables">/WEB-INF/pages/manager/AddTables.jsp</result>	
+			<result name="pay">/WEB-INF/pages/customer/pay.jsp</result>		
+			<result name="error">/error.jsp</result>	
+		</action>
+		
+		
+		
+		<action name="returnindex" class="IndexAction" method="returnindex">			
+			<result name="success">/WEB-INF/pages/customer/logoutindex.jsp</result>
+			<result name="false">/WEB-INF/pages/customer/loginindex.jsp</result>		
+		</action>
+		<action name="pageShowAction" class="IndexAction" method="pageShow">
+			<result name="success" type="redirectAction">returnindex</result>
+			<result name="menupage">/WEB-INF/pages/customer/menu.jsp</result>
+			<result name="userpage">/WEB-INF/pages/customer/user.jsp</result>
+			<result name="leavemsg">/WEB-INF/pages/customer/leavemessage.jsp</result>
+		</action>
+		<action name="adShowAction" class="IndexAction" method="adShow">
+			<result name="success" type="redirectAction">returnindex</result>	
+		</action>
+		
+
+
+
+
+		<!--购物车操作 -->
+
+		<action name="addCartAction" class="CartAction" method="addCart">
+			<result name="addCart">/WEB-INF/pages/customer/menu.jsp</result>
+		</action>
+		<action name="clearCartAction" class="CartAction" method="clearCart">
+			<result name="clearCart">/WEB-INF/pages/customer/menu.jsp</result>
+		</action>
+		<action name="cutCartAction" class="CartAction" method="cutCart">
+			<result name="cutCart">/WEB-INF/pages/customer/menu.jsp</result>
+		</action>
+
+		<!--订单操作 -->
+		<action name="postOrderAction" class="OrderAction" method="postOrder">
+			<result name="postOrder" type="redirectAction">returnindex</result>
+			<result name="error">/error.jsp</result>
+			<result name="index" type="redirectAction">returnindex</result>
+		</action>
+
+		<action name="findAllOrderAction" class="OrderAction" method="findAllOrder">			
+			<result name="findAllOrder">/WEB-INF/pages/waiter/orderoperate.jsp</result>
+		</action>
+		
+		<action name="payOrderAction" class="OrderAction" method="payOrder">			
+			<result name="payOrder">/WEB-INF/pages/customer/paysuccess.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		
+				
+		<!--食物操作 -->
+		<action name="findAllFoodAction" class="FoodAction" method="findAllFood">
+			<result name="findAllFood">/WEB-INF/pages/manager/foodoperate.jsp</result>
+		</action>
+
+
+		<action name="addFoodAction" class="FoodAction" method="addFood">
+			<result name="addFood" type="redirectAction">findAllFoodAction</result>
+		</action>
+		<action name="removeFoodAction" class="FoodAction" method="removeFood">
+			<result name="removeFood" type="redirectAction">findAllFoodAction</result>
+		</action>
+
+		<action name="reviseFoodMsgAction" class="FoodAction" method="reviseFoodMsg">
+			<result name="success">/WEB-INF/pages/manager/foodrevisemsg.jsp</result>
+		</action>
+		<action name="reviseFoodAction" class="FoodAction" method="reviseFood">
+			<result name="reviseFood" type="redirectAction">findAllFoodAction</result>
+		</action>
+
+
+		<action name="showFoodAction" class="FoodAction" method="findFoodByClassify">
+			<result name="menu">/WEB-INF/pages/customer/menu.jsp</result>
+			<result name="success">/WEB-INF/pages/manager/foodoperate.jsp</result>
+		</action>
+
+		<!--顾客操作 -->
+		
+		<action name="customerRegisterAction" class="CustomerAction"
+			method="Register">
+			<result name="success" >/index.jsp</result>
+			<result name="false">/error.jsp</result>
+		</action>
+		<action name="customerLogoutAction" class="CustomerAction"
+			method="customerLogout">
+			<result name="success" type="redirectAction">returnindex</result>
+		</action>
+		<action name="customerLoginAction" class="CustomerAction"
+			method="customerLogin">
+			<result name="success" type="redirectAction">returnindex</result>
+			<result name="false">/error.jsp</result>
+		</action>
+		
+
+		
+		
+		<action name="findAllCustomerAction" class="CustomerAction"
+			method="findAllCustomer">
+			<result name="findAllCustomer">/WEB-INF/pages/manager/customeroperate.jsp</result>
+		</action>
+
+		<!--数据统计操作 -->
+		<action name="findAllStatisticsAction" class="StatisticsAction"
+			method="findAllStatistics">
+			<result name="findAllStatistics">/WEB-INF/pages/manager/statisticsoperate.jsp</result>
+		</action>
+		<!--留言展示 -->
+		<action name="findAllMessageAction" class="MessageAction"
+			method="findAllMessage">
+			<result name="findAllMessage">/WEB-INF/pages/manager/messageoperate.jsp</result>
+		</action>
+		<action name="postMessageAction" class="MessageAction"
+			method="postMessage">
+			<result name="postMessage" type="redirectAction">returnindex</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<!--服务员操作 -->
+		
+		<action name="waiterLoginAction" class="WaiterAction" method="waiterLogin">
+			<result name="success">/WEB-INF/pages/waiter/waiterpage.jsp</result>
+			<result name="false">/error.jsp</result>
+		</action>
+		
+		
+		
+		<action name="addWaiter" class="WaiterAction" method="save">
+			<result name="zengjia" type="redirectAction">searchWaiter</result>
+		</action>
+
+		<action name="searchWaiter" class="WaiterAction" method="show">
+			<result name="zhanshi">/WEB-INF/pages/manager/waiteroperate.jsp</result>
+		</action>
+
+		<action name="deleteWaiter" class="WaiterAction" method="delete">
+			<result name="shanchu" type="redirectAction">searchWaiter</result>
+		</action>
+
+		<!--餐桌管理 -->
+		
+		<action name="tablesList" class="TablesAction" method="tablesList">
+			<result name="success">/WEB-INF/pages/manager/tablesoperate.jsp</result>
+		</action>
+				
+		<action name="waiterToTables" class="TablesAction" method="waiterToTables">
+			<result name="success">/WEB-INF/pages/waiter/waitertableshow.jsp</result>
+		</action>
+		
+		<action name="toTables" class="TablesAction" method="toTables">
+			<result name="success" type="chain">tablesList</result>
+		</action>
+		<action name="AddTable" class="TablesAction" method="addTable">
+			<result name="success" type="chain">tablesList</result>
+		</action>
+		<action name="deleteTable" class="TablesAction" method="deleteTable">
+			<result name="success" type="chain">tablesList</result>
+		</action>
+		<action name="selectTablesId" class="TablesAction" method="selectTablesId">
+			<result name="success">/WEB-INF/pages/manager/updateTable.jsp</result>
+		</action>
+		<action name="updateTable" class="TablesAction" method="updateTable">
+			<result name="success" type="chain">tablesList</result>
+		</action>
+		
+		
+		<action name="setTablesAction" class="TablesAction" method="setTables">
+			<result name="setTables" type="redirectAction">waiterToTables</result>
+		</action>
+		
+		<!--订单管理 -->
+		<action name="queueList" class="QueueAction" method="queueList">
+			<result name="success">/WEB-INF/pages/waiter/queueoperate.jsp</result>
+		</action>
+
+		<action name="toQueue" class="QueueAction" method="toQueue">
+			<result name="success" type="chain">queueList</result>
+		</action>
+
+		<action name="updateStateG" class="QueueAction" method="updateStateG">
+			<result name="success" type="chain">queueList</result>
+		</action>
+
+		<action name="updateStateR" class="QueueAction" method="updateStateR">
+			<result name="success" type="chain">queueList</result>
+		</action>
+
+		<action name="AddQueue" class="QueueAction" method="addQueue">
+			<result name="success" type="chain">queueList</result>
+		</action>
+
+		<action name="getTime" class="QueueAction" method="getTime">
+			<result name="success">/WEB-INF/pages/waiter/AddQueue.jsp</result>
+		</action>
+		
+		
+		
+		<action name="customerAddQueue" class="QueueAction" method="customerAddQueue">
+			<result name="success">/WEB-INF/pages/waiter/CustomerQueueSucc.jsp</result>
+		</action>
+		
+		<action name="toCustomerQueue" class="QueueAction" method="getTime">
+			<result name="success" >CustomerQueue.jsp</result>
+		</action>
+		
+		
+		<!--管理员操作-->
+		<action name="managerLoginAction" class="ManagerAction" method="managerLogin">
+			<result name="success">/WEB-INF/pages/manager/managepage.jsp</result>
+			<result name="false">/error.jsp</result>
+		</action>
+		
+		
+		<!-- 广告操作 -->
+		<action name="findAllAdvertisementAction" class="AdvertisementAction"
+			method="findAllAdvertisement">
+			<result name="findAllAdvertisement">/WEB-INF/pages/manager/advertisementoperate.jsp</result>
+		</action>
+		<action name="findAdvertisementBySourceAction" class="AdvertisementAction"
+			method="findAdvertisementBySource">
+			<result name="findAdvertisementBySource" type="redirectAction">returnindex
+			</result>
+		</action>
+	</package>
+</struts>    

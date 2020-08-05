@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+
+<context:annotation-config />
+
+
+<!--连接池  -->
+
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>
+        <property name="url" value="jdbc:sqlserver://localhost:1433;DatabaseName=zhbitt"></property>
+        <property name="username" value="sa"></property>
+        <property name="password" value="sa"></property>
+    </bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:hibernate.cfg.xml">
+		</property>
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+<bean id="IndexAction" class="com.zhbit.action.IndexAction"></bean>
+<bean id="CartAction" class="com.zhbit.action.CartAction"></bean>
+<bean id="OrderAction" class="com.zhbit.action.OrderAction"></bean>
+<bean id="FoodAction" class="com.zhbit.action.FoodAction"></bean>
+<bean id="StatisticsAction" class="com.zhbit.action.StatisticsAction"></bean>
+<bean id="CustomerAction" class="com.zhbit.action.CustomerAction"></bean>
+<bean id="MessageAction" class="com.zhbit.action.MessageAction"></bean>
+<bean id="WaiterAction" class="com.zhbit.action.WaiterAction"></bean>
+<bean id="QueueAction" class="com.zhbit.action.QueueAction" ></bean>
+<bean id="TablesAction" class="com.zhbit.action.TablesAction"></bean>
+<bean id="ManagerAction" class="com.zhbit.action.ManagerAction"></bean>
+<bean id="AdvertisementAction" class="com.zhbit.action.AdvertisementAction"></bean>
+
+<bean id="OrderService" class="com.zhbit.serviceimpl.OrderServiceImpl" scope="prototype"></bean>
+<bean id="StatisticsService" class="com.zhbit.serviceimpl.StatisticsServiceImpl" scope="prototype"></bean>
+<bean id="FoodService" class="com.zhbit.serviceimpl.FoodServiceImpl" scope="prototype"></bean>
+<bean id="CustomerService" class="com.zhbit.serviceimpl.CustomerServiceImpl" scope="prototype"></bean>		
+<bean id="MessageService" class="com.zhbit.serviceimpl.MessageServiceImpl" scope="prototype"></bean>	
+<bean id="WaiterService" class="com.zhbit.serviceimpl.WaiterServiceImpl" scope="prototype"></bean>	
+<bean id="QueueService" class="com.zhbit.serviceimpl.QueueServiceImpl" scope="prototype"></bean>
+<bean id="TablesService" class="com.zhbit.serviceimpl.TablesServiceImpl" scope="prototype"></bean>
+<bean id="AdvertisementService" class="com.zhbit.serviceimpl.AdvertisementServiceImpl" scope="prototype"></bean>
+<bean id="ManagerService" class="com.zhbit.serviceimpl.ManagerServiceImpl" scope="prototype"></bean>
+
+<bean id="FoodDao" class="com.zhbit.daoimpl.FoodDaoImpl" scope="prototype"></bean>		
+<bean id="OrderDao" class="com.zhbit.daoimpl.OrderDaoImpl" scope="prototype"></bean>			
+<bean id="StatisticsDao" class="com.zhbit.daoimpl.StatisticsDaoImpl" scope="prototype"></bean>
+<bean id="CustomerDao" class="com.zhbit.daoimpl.CustomerDaoImpl" scope="prototype"></bean>		
+<bean id="MessageDao" class="com.zhbit.daoimpl.MessageDaoImpl" scope="prototype"></bean>
+<bean id="WaiterDao" class="com.zhbit.daoimpl.WaiterDaoImpl" scope="prototype"></bean>	
+<bean id="QueueDao" class="com.zhbit.daoimpl.QueueDaoImpl" scope="prototype"></bean>
+<bean id="TablesDao" class="com.zhbit.daoimpl.TablesDaoImpl" scope="prototype"></bean>
+<bean id="AdvertisementDao" class="com.zhbit.daoimpl.AdvertisementDaoImpl" scope="prototype"></bean>
+<bean id="ManagerDao" class="com.zhbit.daoimpl.ManagerDaoImpl" scope="prototype"></bean>
+	
+</beans>

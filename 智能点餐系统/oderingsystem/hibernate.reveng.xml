@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+	<table name="t_Queue" schema="dbo" catalog="OrderingSystem">
+		<column name="QueueTime"></column>
+		<column name="QueueID" exclude="true"></column>
+	</table>
+	<table name="t_Order" schema="dbo" catalog="OrderingSystem"
+		class="com.zhbit.model.Order">
+		<column name="OrderID" exclude="true"></column>
+		<column name="FK_CustomerID" exclude="true"></column>
+	</table>
+	<table name="t_OrderMessage" schema="dbo" catalog="OrderingSystem"
+		class="com.zhbit.model.OrderMessage">
+		<column name="FK_FoodID" exclude="true"></column>
+		<column name="FK_OrderID" exclude="true"></column>
+	</table>
+	<table name="t_Customer" schema="dbo" catalog="OrderingSystem"
+		class="com.zhbit.model.Customer">
+		<column name="CustomerID" exclude="true"></column>
+	</table>
+	<table name="t_Food" schema="dbo" catalog="OrderingSystem"
+		class="com.zhbit.model.Food">
+		<column name="FoodID" exclude="true"></column>
+	</table>
+	<table name="t_Message" schema="dbo" catalog="OrderingSystem"
+		class="com.zhbit.model.Message">
+		<column name="MessageID" exclude="true"></column>
+		<column name="FK_CustomerID" exclude="true"></column>
+	</table>
+	<table name="t_Tables" schema="dbo" catalog="OrderingSystem"
+		class="com.zhbit.model.Tables">
+		<column name="TablesID" exclude="true"></column>
+	</table>
+	<table name="t_Statistics" schema="dbo" catalog="OrderingSystem"
+		class="com.zhbit.model.Statistics">
+		<column name="StatisticsID" exclude="true"></column>
+	</table>
+	<table name="t_Advertisement" schema="dbo" catalog="OrderingSystem"
+		class="com.zhbit.model.Adertisement">
+	</table>
+	<table name="t_Advertisement" schema="dbo" catalog="Test"
+		class="com.zhbit.model.Advertisement">
+	</table>
+	<table name="t_Customer" schema="dbo" catalog="Test"
+		class="com.zhbit.model.Customer">
+	</table>
+	<table name="t_Food" schema="dbo" catalog="Test"
+		class="com.zhbit.model.Food">
+	</table>
+	<table name="t_Manager" schema="dbo" catalog="Test"
+		class="com.zhbit.model.Manager">
+	</table>
+	<table name="t_Message" schema="dbo" catalog="Test"
+		class="com.zhbit.model.Message">
+	</table>
+	<table name="t_Order" schema="dbo" catalog="Test"
+		class="com.zhbit.model.Order">
+	</table>
+	<table name="t_OrderMessage" schema="dbo" catalog="Test"
+		class="com.zhbit.model.OrderMessage">
+	</table>
+	<table name="t_Queue" schema="dbo" catalog="Test"
+		class="com.zhbit.model.Queue">
+	</table>
+	<table name="t_Statistics" schema="dbo" catalog="Test"
+		class="com.zhbit.model.Statistics">
+	</table>
+	<table name="t_Tables" schema="dbo" catalog="Test"
+		class="com.zhbit.model.Tables">
+	</table>
+	<table name="t_Waiter" schema="dbo" catalog="Test" class="com.zhbit.model.Waiter"></table>
+</hibernate-reverse-engineering>

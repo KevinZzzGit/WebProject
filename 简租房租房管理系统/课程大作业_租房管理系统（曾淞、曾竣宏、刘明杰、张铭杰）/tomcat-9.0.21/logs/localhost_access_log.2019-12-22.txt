@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:16:22 +0800] "GET /RoomManage HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:16:23 +0800] "GET /RoomManage/ HTTP/1.1" 200 5357
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:16:23 +0800] "GET /RoomManage/bootstrap-4.3.1-dist/css/bootstrap.css HTTP/1.1" 200 192348
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:16:23 +0800] "GET /RoomManage/source/img/login-1.jpg HTTP/1.1" 200 3811149
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:16:25 +0800] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:16:30 +0800] "POST /RoomManage/servlet/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:16:31 +0800] "GET /RoomManage/manage/manage.jsp HTTP/1.1" 200 8248
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:16:31 +0800] "GET /RoomManage/source/css/dashboard.css HTTP/1.1" 200 1685
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:16:31 +0800] "GET /RoomManage/bootstrap-3.3.7-dist/css/bootstrap.css HTTP/1.1" 200 152767
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:16:31 +0800] "GET /RoomManage/source/js/vue.js HTTP/1.1" 200 341462
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:16:31 +0800] "GET /RoomManage/source/js/jquery-3.4.0.js HTTP/1.1" 200 279860
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:16:31 +0800] "GET /RoomManage/bootstrap-3.3.7-dist/js/bootstrap.js HTTP/1.1" 200 69707
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:16:31 +0800] "GET /RoomManage/servlet/roomtable1?1 HTTP/1.1" 200 8
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:16:31 +0800] "GET /RoomManage/servlet/roomtable?3 HTTP/1.1" 200 1324
+127.0.0.1 - - [22/Dec/2019:22:49:42 +0800] "GET / HTTP/1.1" 200 11204
+0:0:0:0:0:0:0:1 - - [22/Dec/2019:22:49:57 +0800] "GET /RoomManage/ HTTP/1.1" 200 5357

@@ -1,0 +1,457 @@
+@charset "utf-8";
+
+/*通用样式*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 12px;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+	font-size: 12px;
+}
+
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,
+p {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+img {
+	border: 0px;
+}
+
+.clear {
+	clear: both;
+}
+
+button {
+	width: 181px;
+}
+
+/*header*/
+#header{
+	font-size: 20px;
+	font-weight: 600;
+}
+#toplist ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #e62b00;
+	box-shadow: 0px 3px 2px #888888;
+}
+
+#toplist ul li {
+	float: left;
+}
+
+li a,
+.menu2 {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+#toplist ul li a:hover,
+.menu1:hover,
+.menu2:hover {
+	background-color: #b32100;
+	color: white;
+	text-decoration: none;
+}
+
+.menu1 {
+	display: inline-block;
+}
+
+.menu1-minmenu {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 96px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.menu1-minmenu a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	font-size: smaller;
+
+}
+
+.menu1-minmenu a:hover {
+	background-color: #f1f1f1;
+}
+
+.menu1:hover .menu1-minmenu {
+	display: block;
+}
+
+#lilogo {
+	font-size: 30px;
+	line-height: 10px;
+	font-weight: 600;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	float: left;
+	padding-top: 10px;
+	padding-left: 20px;
+	color: white;
+}
+
+#lilogo a:hover {
+	color: white;
+	background-color: #e62b00;
+	text-decoration: none;
+}
+#lilogo:link,.menu2:link{
+				color: white;
+				text-decoration: none;
+			}
+			#menu2:visited{
+				color: white;
+			}
+
+#header {
+	z-index: 1;
+	position: relative;
+}
+/*商品详情部分*/
+.shopdetails {
+	width: 1100px;
+	height: 650px;
+	margin: 0 auto;
+	margin-top: 20px;
+	position: relative;
+}
+
+/*放大镜*/
+#leftbox {
+	width: 790px;
+	height: 650px;
+	float: left;
+	position: absolute;
+	z-index: 0;
+}
+
+#img0 {
+	width: 790px;
+	height: 450px;
+}
+
+#leftbox2 {
+	width: 790px;
+	height: 15px;
+
+}
+
+#leftbox3 {
+	width: 789px;
+	height: 152px;
+	border: 1px solid #D9D9D9;
+	background-color: #EDEDED;
+}
+
+#leftbox4 {
+	width: 789px;
+	height: 20px;
+}
+
+#c0 {
+	width: 1100px;
+	height: 120px;
+	margin: 0 auto;
+}
+
+#img1 {
+	width: 150px;
+	height: 150px;
+	border: 5px solid transparent;
+}
+
+#img1:hover {
+	border: 5px solid red;
+}
+
+#showbox {
+	background: #eee;
+}
+
+#showbox span {
+	background: url(../images/shopdetail/whitebg.png) repeat;
+}
+
+#showsum {
+	left: 25px;
+	margin-top: 10px;
+}
+
+#showsum span {
+	border: 1px solid #ddd;
+}
+
+#showsum span.sel {
+	border: 1px solid #f60;
+}
+
+.showpage {
+	width: 400px;
+	position: relative;
+}
+
+.showpage a {
+	display: block;
+	width: 15px;
+	border: 1px solid #ddd;
+	height: 60px;
+	line-height: 60px;
+	background: #eee;
+	text-align: center;
+	font-size: 18px;
+	position: absolute;
+	left: 0;
+	top: -62px;
+	text-decoration: none;
+	color: #999;
+}
+
+.showpage a#shownext {
+	left: auto;
+	right: 0;
+}
+
+.showpage a:hover {
+	background: #ccc;
+	color: #777;
+}
+
+/*中间*/
+
+.centerbox {
+	width: 300px;
+	height: 700px;
+	float: right;
+	top: 0px;
+	z-index: 1;
+	margin-left: 10px
+}
+
+.centerbox .imgname {
+	font-size: 24px;
+	color: #000;
+	font-weight: bold;
+	width: 300px;
+	height: 40px;
+	font-family: Microsoft YaHei, arial;
+	margin-bottom: 10px;
+}
+
+.centerbox p,
+.centerbox samp {
+	width: 300px;
+	height: 33px;
+	font-size: 12px;
+	line-height: 33px;
+	color: #666;
+	font-family: "微软雅黑";
+	padding-left: 10px;
+
+}
+
+.centerbox .tab {
+	width: 300px;
+	height: 90px;
+
+}
+
+.centerbox .tab dl {
+
+	float: left;
+	margin: 21px 21px 21px 21px
+}
+
+.centerbox .tab dd {
+	-webkit-margin-start: 0;
+	color: rgba(0, 0, 0, .85);
+	font-size: 20px;
+	line-height: 24px;
+	margin-inline-start: 0;
+	margin-left: 0;
+	display: block;
+}
+
+.centerbox .tab dt {
+	color: rgba(0, 0, 0, .4);
+	margin-top: 6px;
+	font-size: 14px;
+	display: block;
+}
+
+.centerbox .order {
+	border-radius: 2px;
+	font-size: 0;
+	padding: 20px;
+	height: 70px;
+	width: 256px;
+}
+
+}
+
+.centerbox .Aprice,
+.price,
+.youhui {
+	background: rgba(232, 232, 232, 0.5);
+}
+
+.centerbox .Aprice samp {
+	font-size: 25px;
+	text-decoration: line-through;
+	font-family: "华文仿宋";
+}
+
+.centerbox .price samp {
+	color: #D00;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.centerbox .youhui samp {
+	color: #000;
+	font-weight: 100;
+}
+
+.centerbox .kefu {
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	width: 150px;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.centerbox ul {
+	margin-left: 2px;
+	margin-top: 15px;
+}
+
+
+.centerbox .now {
+	background-color: #F90;
+}
+
+.centerbox .buy {
+	margin-left: 15px;
+	margin-top: 8px;
+}
+
+.centerbox .buy a {
+
+	display: block;
+	width: 40px;
+	height: 30px;
+	color: #000;
+	border: 1px solid #ccc;
+	float: left;
+	font-size: 10px;
+	font-weight: bold;
+	font-family: Microsoft YaHei, arial;
+	margin-left: 10px;
+	background-color: #fff;
+	text-align: center;
+	line-height: 30px;
+}
+
+
+#firstbuy {
+	background-color: #f00;
+	color: #fff;
+}
+
+/*evaluate_各种介绍*/
+.evaluate {
+	width: 1100px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 30px;
+	position: relative;
+}
+
+.evaluate.Z_isection scrollid {
+	display: block;
+	text-align: left;
+}
+
+
+
+/* bottom_页脚部分*/
+.backf {
+	margin-top: 20px;
+	border-top: 1px solid #ccc;
+}
+
+#footer {
+	width: 1100px;
+	margin: 0 auto;
+
+
+
+}
+
+#footer ul {
+	float: left;
+	width: 200px;
+	text-decoration: none;
+
+}
+
+#footer .sy {
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+	padding-left: 35px;
+}
+
+#footer ul li {
+	width: 180px;
+	padding: 5px;
+}
+
+#footer ul li a,
+#footer ul li a:visited {
+	font-size: 12px;
+	color: #000;
+	margin-left: 60px;
+	text-decoration: none;
+
+}
+
+#footer ul li a:hover {
+	color: #F36;
+}
+
+.foot {
+	height: 100px;
+	background: #000;
+	padding: 10px;
+}
+.foot ul li{
+	font-size: 20px;
+	line-height: normal;
+}
+

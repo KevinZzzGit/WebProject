@@ -1,0 +1,82 @@
+26-Dec-2019 15:55:45.315 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本:        Apache Tomcat/9.0.21
+26-Dec-2019 15:55:45.330 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.构建:          Jun 4 2019 20:19:36 UTC
+26-Dec-2019 15:55:45.330 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.21.0
+26-Dec-2019 15:55:45.330 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+26-Dec-2019 15:55:45.330 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:            10.0
+26-Dec-2019 15:55:45.330 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 结.造:          amd64
+26-Dec-2019 15:55:45.330 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:             C:\Program Files\Java\jdk1.8.0_231\jre
+26-Dec-2019 15:55:45.334 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 版本:           1.8.0_231-b11
+26-Dec-2019 15:55:45.334 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:            Oracle Corporation
+26-Dec-2019 15:55:45.334 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21
+26-Dec-2019 15:55:45.334 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21
+26-Dec-2019 15:55:45.334 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\conf\logging.properties
+26-Dec-2019 15:55:45.334 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+26-Dec-2019 15:55:45.334 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+26-Dec-2019 15:55:45.334 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+26-Dec-2019 15:55:45.334 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+26-Dec-2019 15:55:45.334 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21
+26-Dec-2019 15:55:45.334 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21
+26-Dec-2019 15:55:45.350 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\temp
+26-Dec-2019 15:55:45.350 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_231\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_231;";%CATALINA_HOME%\bin";C:\Program Files\Java\jdk1.8.0_231\bin;.;C:\Program Files\Java\jdk1.8.0_231\lib;C:\Program Files\Java\jdk1.8.0_231\lib\tool.jar;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Users\KrisTopherZ\AppData\Local\Microsoft\WindowsApps;D:\Bandizip\;.]
+26-Dec-2019 15:55:45.672 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-80"]
+26-Dec-2019 15:55:46.159 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["ajp-nio-8009"]
+26-Dec-2019 15:55:46.163 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[1,061]毫秒内初始化
+26-Dec-2019 15:55:46.195 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+26-Dec-2019 15:55:46.195 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.21]
+26-Dec-2019 15:55:46.206 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\docs]
+26-Dec-2019 15:55:46.433 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\docs] has finished in [227] ms
+26-Dec-2019 15:55:46.433 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\examples]
+26-Dec-2019 15:55:46.891 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\examples] has finished in [458] ms
+26-Dec-2019 15:55:46.904 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\host-manager]
+26-Dec-2019 15:55:46.954 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\host-manager] has finished in [50] ms
+26-Dec-2019 15:55:46.957 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\manager]
+26-Dec-2019 15:55:47.007 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\manager] has finished in [50] ms
+26-Dec-2019 15:55:47.009 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\RoomManage]
+26-Dec-2019 15:55:47.410 信息 [main] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+26-Dec-2019 15:55:47.479 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\RoomManage] has finished in [470] ms
+26-Dec-2019 15:55:47.481 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\ROOT]
+26-Dec-2019 15:55:47.530 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\ROOT] has finished in [49] ms
+26-Dec-2019 15:55:47.536 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-80"]
+26-Dec-2019 15:55:47.551 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["ajp-nio-8009"]
+26-Dec-2019 15:55:47.558 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in [1,387] milliseconds
+26-Dec-2019 16:07:01.658 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本:        Apache Tomcat/9.0.21
+26-Dec-2019 16:07:01.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.构建:          Jun 4 2019 20:19:36 UTC
+26-Dec-2019 16:07:01.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.21.0
+26-Dec-2019 16:07:01.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+26-Dec-2019 16:07:01.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:            10.0
+26-Dec-2019 16:07:01.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 结.造:          amd64
+26-Dec-2019 16:07:01.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:             C:\Program Files\Java\jdk1.8.0_231\jre
+26-Dec-2019 16:07:01.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 版本:           1.8.0_231-b11
+26-Dec-2019 16:07:01.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:            Oracle Corporation
+26-Dec-2019 16:07:01.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21
+26-Dec-2019 16:07:01.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21
+26-Dec-2019 16:07:01.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\conf\logging.properties
+26-Dec-2019 16:07:01.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+26-Dec-2019 16:07:01.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+26-Dec-2019 16:07:01.668 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+26-Dec-2019 16:07:01.678 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+26-Dec-2019 16:07:01.678 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21
+26-Dec-2019 16:07:01.678 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21
+26-Dec-2019 16:07:01.688 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\temp
+26-Dec-2019 16:07:01.688 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_231\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_231;";%CATALINA_HOME%\bin";C:\Program Files\Java\jdk1.8.0_231\bin;.;C:\Program Files\Java\jdk1.8.0_231\lib;C:\Program Files\Java\jdk1.8.0_231\lib\tool.jar;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Users\KrisTopherZ\AppData\Local\Microsoft\WindowsApps;D:\Bandizip\;.]
+26-Dec-2019 16:07:01.935 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-80"]
+26-Dec-2019 16:07:02.388 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["ajp-nio-8009"]
+26-Dec-2019 16:07:02.403 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[907]毫秒内初始化
+26-Dec-2019 16:07:02.423 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+26-Dec-2019 16:07:02.423 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.21]
+26-Dec-2019 16:07:02.433 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\docs]
+26-Dec-2019 16:07:02.622 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\docs] has finished in [189] ms
+26-Dec-2019 16:07:02.622 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\examples]
+26-Dec-2019 16:07:02.964 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\examples] has finished in [342] ms
+26-Dec-2019 16:07:02.974 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\host-manager]
+26-Dec-2019 16:07:03.005 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\host-manager] has finished in [31] ms
+26-Dec-2019 16:07:03.005 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\manager]
+26-Dec-2019 16:07:03.035 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\manager] has finished in [30] ms
+26-Dec-2019 16:07:03.035 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\RoomManage]
+26-Dec-2019 16:07:03.341 信息 [main] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+26-Dec-2019 16:07:03.357 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\RoomManage] has finished in [322] ms
+26-Dec-2019 16:07:03.367 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\ROOT]
+26-Dec-2019 16:07:03.395 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\KrisTopherZ\Desktop\Web_大作业，含后端\tomcat-9.0.21\webapps\ROOT] has finished in [28] ms
+26-Dec-2019 16:07:03.405 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-80"]
+26-Dec-2019 16:07:03.405 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["ajp-nio-8009"]
+26-Dec-2019 16:07:03.415 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in [1,012] milliseconds

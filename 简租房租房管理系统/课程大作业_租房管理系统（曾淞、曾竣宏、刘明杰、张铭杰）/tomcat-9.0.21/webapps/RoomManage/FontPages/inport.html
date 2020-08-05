@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>订购页面</title>
+		<link href="demo2.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+
+		<script>
+			window.onload=function(){
+			if(location.search!=0){
+				var data=location.search.slice(1);
+				// document.getElementById("price").innerHTML=data;
+					if(data==1){
+						alert("预约成功");
+					}
+				}	
+			}
+	</script>
+
+		<!-----header部分------->
+		<div id="header">
+
+			<div id="toplist">
+				<ul>
+					<a id="lilogo" href="index.html">简租房<small>Simple.com</small></a>
+					<li style="padding-left: 40px;"><a href="index.html">首页</a></li>
+					<div class="menu1">
+						<a href="#" class="menu2">二手房</a>
+						<div class="menu1-minmenu">
+							<a href="#">在售房源</a>
+							<a href="#">优选资源</a>
+							<a href="#">排行榜</a>
+						</div>
+					</div>
+					<div class="menu1">
+						<a href="#" class="menu2">家具精装</a>
+						<div class="menu1-minmenu">
+							<a href="#">家装案例</a>
+							<a href="#">家装案例</a>
+							<a href="#">免费设计</a>
+							<a href="#">免费验房</a>
+						</div>
+					</div>
+					<div class="menu1">
+						<a href="#" class="menu2">业主论坛</a>
+						<div class="menu1-minmenu">
+							<a href="#">精华帖</a>
+							<a href="#">业主活动</a>
+							<a href="#">房东群</a>
+						</div>
+					</div>
+					<div class="menu1">
+						<a href="#" class="menu2">房产百科</a>
+						<div class="menu1-minmenu">
+							<a href="#">房产快讯</a>
+							<a href="#">房产问答</a>
+							<a href="#">房产知识</a>
+							<a href="#">房产圈</a>
+						</div>
+					</div>
+					<div class="menu1">
+						<a href="#" class="menu2">更多</a>
+						<div class="menu1-minmenu">
+							<a href="#">产业</a>
+							<a href="#">海外房景</a>
+							<a href="#">加盟链接</a>
+							<a href="#">移动App</a>
+						</div>
+					</div>
+					<div style="float: right;">
+						<li><a href="#news">登陆</a></li>
+						<li><a href="#news">注册</a></li>
+					</div>
+				</ul>
+			</div>
+
+		</div>
+		<!-----header结束------->
+		<!-----商品详情部分------->
+		<div class="shopdetails" style="margin-top: 20px;">
+
+			<!-------放大镜-------->
+			<br>
+			<form action="http://localhost/RoomManage/servlet/apply" method="get" onsubmit="return my();">
+				<p style="font-size: 50px;font-weight: bold;" align="center">其输入预约信息</p>
+				<font style="font-size: 35px;line-height: 80px;margin-left: 80px;">姓&nbsp;名: </font><input size="13" type="text"
+				 name="name" id="id1" style="font-size: 35px;" /><br />
+				<font style="font-size: 35px;line-height: 80px;margin-left: 80px;">性&nbsp;别: &nbsp;&nbsp;&nbsp;</font><input type="radio"
+				 name="sex" id="id2" value="1" style="font-size: 35px;" />
+				<font style="font-size: 35px;">男&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+				<input type="radio" name="sex" value="1" style="font-size: 35px;" />
+				<font style="font-size: 35px;">女</font>
+				<font style="font-size: 35px;margin-left: 190px;">预约房间:&nbsp;&nbsp;<input size="13" type="text" name="room" id="id1"
+					 style="font-size: 35px;" /><br /><br />
+					<font style="font-size: 35px;margin-left: 80px;">手&nbsp;机: </font><input size="13" type="text" name="tel" style="font-size: 35px;" /><br /><br />
+					<font style="font-size: 35px;line-height: 80px;margin-left: 80px;">身份证号码:</font>
+					<font style="font-size: 35px;margin-left: 290px;">预约日期: </font><input size="13" style="font-size: 35px;" type="date"
+					 name="intime" /><br />
+					<input size="19" style="font-size: 35px;margin-left: 80px;" type="text" name="idcard" />
+					<br>
+					<input type="submit" name="" id="" value="确定预约" style="width: 200px;height: 50px;background-color:#5CACEE;border-radius: 7px; margin-top: 40px;margin-left: 300px" />
+					<input type="button" onclick=javascrtpt:jump() name="" id="" value="取消" style="width: 200px;height: 50px;background-color:#5CACEE;border-radius: 7px;margin-bottom: 70px;margin-left: 100px;" />
+			</form>
+		</div>
+		<script>
+			function jump() {
+				window.location.href = "index.html";
+			}
+
+			function my() {
+				var name = document.getElementById("id1").value;
+				var no = document.getElementById("id2").value;
+				if (name == "" || no == "") {
+					alert("必须填写姓名与手机号");
+				}
+			}
+		</script>
+
+
+		<!-----商品详情部分结束------->
+		<!-----商品详情评价部分------->
+		<div class="evaluate">
+			<div class="Z_isection scrollid" id="homedesc">
+				<h2 style="color: rgba(0,0,0,.85);font-size: 24px;font-weight: 600;margin: 0;display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;">房源简介</h2>
+				<p style="font-size: 12px;line-height: 14px;margin-top: 10px;">编号 BJZRGZ2119514538</p>
+
+				<p style="font-size: 17px;letter-spacing: 0;color: rgba(0,0,0,.6);line-height: 23px;margin-top: 30px;margin-bottom:60px;">世华泊郡小区由北京城承物业负责维护,24小时安保服务。
+					小区安静,居民多是上班族为主,素质高。房子朝南带阳台的一居室，采光很好，自如整租4.0装修，自如配置家具家电。很适合情侣、闺蜜、小夫妻、三口之家居住。因为业主住在2环，不太方便打理房子，希望您是爱惜房子的TA。</p>
+
+				<div class="clearfloat"></div>
+			</div>
+			<div class="Z_isection mt60 scrollid" id="areacheck" style="margin-bottom:60px;">
+				<h2 style="    color: rgba(0,0,0,.85);font-size: 24px;margin-bottom:21px">空气检测结果</h2>
+				<div class="Z_info_body">
+					<ul style="list-style: none;margin: 0;padding: 0;">
+						<li style="color: rgba(0,0,0,.4);line-height: 20px;margin-top: 18px;font-size: 17px;letter-spacing: 0;list-style: none;margin-bottom: 10px;padding: 0;display: list-item;
+    text-align: -webkit-match-parent;">
+							<span>检测日期</span><span style="color: rgba(0,0,0,.85);margin-left: 23px;font-size: 17px;">&nbsp&nbsp&nbsp&nbsp2019.12.11</span>
+						</li>
+						<li style="color: rgba(0,0,0,.4);line-height: 20px;margin-top: 18px;font-size: 17px;letter-spacing: 0;list-style: none;margin: 0;padding: 0;display: list-item;
+    text-align: -webkit-match-parent;">
+							<span>检测报告</span><a href="#" style="color: #ff961e;margin-left: 23px;font-size: 17px;cursor: pointer;">&nbsp&nbsp&nbsp&nbsp空气检测报告</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="Z_isection mt60 scrollid" id="rentinfo" style="position: relative ; margin-bottom:100px">
+				<h2 style="    color: rgba(0,0,0,.85);font-size: 24px;margin-bottom:21px">租约信息</h2>
+				<div class="xinxi">
+					<ul style="list-style: none;margin: 0;padding: 0;">
+						<li style="color: rgba(0,0,0,.4);line-height: 20px;margin-top: 18px;font-size: 17px;letter-spacing: 0;list-style: none;margin-bottom: 10px;padding: 0;display: list-item;
+    text-align: -webkit-match-parent;">
+							<span>可入住日期</span><span style="color: rgba(0,0,0,.85);margin-left: 23px;font-size: 17px;">2019.12.18</span>
+						</li>
+						<li style="color: rgba(0,0,0,.4);line-height: 20px;margin-top: 18px;font-size: 17px;letter-spacing: 0;list-style: none;margin-bottom: 10px;padding: 0;display: list-item;
+    text-align: -webkit-match-parent;">
+							<span>签约时长</span><span style="color: rgba(0,0,0,.85);margin-left: 23px;font-size: 17px;">&nbsp&nbsp&nbsp可长达10年</span>
+						</li>
+						<li style="color: rgba(0,0,0,.4);line-height: 20px;margin-top: 18px;font-size: 17px;letter-spacing: 0;list-style: none;margin-bottom: 10px;padding: 0;display: list-item;
+    text-align: -webkit-match-parent;">
+							<span>注意事项</span><a href="#" style="color: #ff961e;margin-left: 23px;font-size: 17px;cursor: pointer;">&nbsp&nbsp&nbsp租房合同签订步骤</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+
+		</div>
+
+		<!-----商品详情评价部结束分------->
+
+		<!----bottom_页脚部分----->
+		<div class="backf">
+			<div id="footer">
+				<ul>
+					<li class="sy">支付方式</li>
+					<li><a href="#">在线支付</a></li>
+					<li><a href="#">货到付款</a></li>
+					<li><a href="#">发票说明</a></li>
+					<li><a href="#">余额宝</a></li>
+
+				</ul>
+				<ul>
+					<li class="sy">购物指南</li>
+					<li><a href="#">免费注册</a></li>
+					<li><a href="#">申请会员</a></li>
+					<li><a href="#">开通支付宝</a></li>
+					<li><a href="#">支付宝充值</a></li>
+				</ul>
+				<ul>
+					<li class="sy">商家服务</li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">客服服务</a></li>
+					<li><a href="#">物流服务</a></li>
+					<li><a href="#">缺货赔付</a></li>
+				</ul>
+				<ul>
+					<li class="sy">关于我们</li>
+					<li><a href="#">知识产权</a></li>
+					<li><a href="#">网站合作</a></li>
+					<li><a href="#">规则意见</a></li>
+					<li><a href="#">帮助中心</a></li>
+				</ul>
+				<ul>
+					<li class="sy">其他服务</li>
+					<li><a href="#">诚聘英才</a></li>
+					<li><a href="#">法律声明</a></li>
+
+				</ul>
+				<div class="clear"></div>
+			</div>
+
+			<div class="foot">
+				<ul style="list-style-type: none;text-align: center;color: white;">
+					<li>简租网 版权所有 2019-2080 深ICP备8888888 </li>
+					<li>地址：北京理工大学珠海学院 电话：0755-123123123 E-mail:jianzu@163.com</li>
+					<li> powered by MetInfo 5.2.10 ?2019-2080 www.simple.com</li>
+				</ul>
+			</div>
+
+		</div>
+		<div id="outerdiv" style="position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);z-index:2;width:100%;height:100%;display:none;">
+			    <div id="innerdiv" style="position:absolute;">
+				<img id="bigimg" style="border:5px solid #fff;" />
+			</div>
+		</div>
+	</body>
+</html>

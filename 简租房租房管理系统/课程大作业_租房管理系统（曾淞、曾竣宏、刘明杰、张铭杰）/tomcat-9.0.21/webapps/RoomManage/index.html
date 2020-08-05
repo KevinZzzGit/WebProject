@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+		<title>简租房网站</title>
+		<script src="./source/js/vue.js"></script>
+		<style>
+
+    *{
+    	margin:0;
+    	padding:0;
+    }
+	body{
+		background-image: url(background.jpg);
+	}
+			#header {
+				font-size: 12px;
+				font-weight: 600;
+				height: 50px;
+			}
+			#toplist {
+				width: 100%;
+				position: absolute;
+				z-index: 1;
+			}
+			#toplist ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #e62b00;
+				box-shadow: 0px 3px 2px #888888;
+			}
+			
+			#toplist ul li {
+				float: left;
+			}
+			
+			li a,.menu2 {
+				display: inline-block;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+				color: white;
+			}
+			
+			#toplist ul li a:hover,
+			.menu1:hover,
+			.menu2:hover {
+				background-color: #b32100;
+				color: white;
+				text-decoration: none;
+			}
+			
+			.menu1 {
+				display: inline-block;
+			}
+			
+			.menu1-minmenu {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				min-width: 96px;
+				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			}
+			
+			.menu1-minmenu a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+				font-size: smaller;
+			
+			}
+			
+			.menu1-minmenu a:hover {
+				background-color: #f1f1f1;
+			}
+			
+			.menu1:hover .menu1-minmenu {
+				display: block;
+			}
+			
+			#lilogo {
+				font-size: 30px;
+				line-height: 10px;
+				font-weight: 600;
+				font-family: "Comic Sans MS", cursive, sans-serif;
+				float: left;
+				padding-top: 10px;
+				padding-left: 20px;
+				color: white;
+			}
+			
+			#lilogo:hover {
+				color: white;
+				background-color: #e62b00;
+				text-decoration: none;
+			}
+			#lilogo:link,.menu2:link{
+				color: white;
+				text-decoration: none;
+			}
+			#menu2:visited{
+				color: white;
+			}
+			
+			
+			
+			
+			/* 轮播图 */
+			
+			
+			.dot {
+			  cursor:pointer;
+			  height: 13px;
+			  width: 13px;
+			  margin: 0 2px;
+			  background-color: #bbb;
+			  border-radius: 50%;
+			  display: inline-block;
+			  transition: background-color 0.6s ease;
+			}
+			.toright{
+				right:0;
+			}
+			.toleft, .toright {
+			  cursor: pointer;
+			  position: absolute;
+			 top: 40%; 
+			padding: 5px;
+			  color: skyblue;
+			  font-weight: bold;
+			  font-size: 40px;
+			  transition: 0.8s ease;
+			  border-radius: 0 5px 5px 0;
+			}
+			.toleft:hover, .toright:hover {
+			  background-color: rgba(0,0,0,0.8);
+			  text-decoration: none;
+			}
+			.mylunbo{
+				display:none;
+			}
+			.lunbo{
+				width: 100%;
+				position: absolute;
+				z-index: 0;
+			}
+			.active, .dot:hover {
+			  background-color:  #595959;
+			}
+			
+			
+			.fade {
+			  animation-name: fade;
+			  animation-duration: 3.5s;
+			}	
+			@keyframes fade {
+			  from {opacity: .4} 
+			  to {opacity: 1}
+			}
+			
+			/* 选房列表 */
+					
+					
+			#chooselist{
+				padding-top: 341px;
+				width: 100%;
+				text-align: center;
+			}
+			#chooselist nav a,#chooselist nav a:visited {
+					outline:none;
+					color:#389dc1;
+				}
+			
+				#chooselist nav a:hover{
+					text-decoration:none;
+				} 
+			
+
+				#chooselist nav {
+					display: inline-block;
+					margin: 60px auto 45px;
+					background-color: #5597b4;
+					box-shadow: 0 1px 1px #ccc;
+					border-radius: 2px;
+					font: 15px/1.3 'Open Sans', sans-serif;
+					text-align: center;
+				}
+				
+				#chooselist nav a {
+					display: inline-block;
+					padding: 18px 30px;
+					color: #fff !important;
+					font-weight: bold;
+					font-size: 17px;
+					text-decoration: none !important;
+					line-height: 1;
+					text-transform: uppercase;
+					background-color: transparent;
+					transition: background-color 0.50s;
+				}
+				
+				#chooselist nav a:first-child {
+					border-radius: 2px 0 0 2px;
+				}
+				
+				#chooselist nav a:last-child {
+					border-radius: 0 2px 2px 0;
+				}
+				
+				#chooselist nav.onehandhouse .onehandhouse,
+				#chooselist nav.twohandhouse .twohandhouse,
+				#chooselist nav.threehandhouse .threehandhouse,
+				#chooselist nav.fourhandhouse .fourhandhouse {
+					background-color: #e35885;
+				}
+				
+				#chooselist p {
+					font-size: 22px;
+					font-weight: bold;
+					color: #7d9098;
+				}
+				
+
+			
+/* 			页jio */
+			.foot {
+				height: 100px;
+				background: #000;
+				margin-top: 80px;
+				padding-top: 15px;
+				opacity:0.6;
+				filter:alpha(opacity=40);
+			}
+			.foot ul li{
+				font-size: 20px;
+				line-height: normal;
+			}
+			
+			
+			
+			
+			
+	/* 		卡片样式 */
+			.carda {
+				font-family: "Comic Sans MS", cursive, sans-serif;
+				padding: 10px 120px 0px 0px;
+				color: grey;
+				font-size: 40px;font
+			}
+			.carda:hover{
+				color: red;
+				text-decoration: none;
+			}
+			
+			.carda1,.carda2,.carda3{
+				color: #ffffff;display: inline-block;padding: 5px 10px;margin-top: 10px;
+				border-radius: 10px;text-transform: uppercase;font-size: 15px;
+			}
+			.carda1{
+				background-color: #c4d7e0;
+			}
+			.carda2{
+				background-color:  #ffa366;
+			}
+			.carda3{
+				background-color:   #66e0ff;
+			}
+			.carda1:hover,.carda2:hover,.carda3:hover{
+				color: #e60000;
+			}
+		</style>
+		<script>
+					function aaa(){
+					
+					if(location.search!=0){
+						var data=location.search.slice(1);
+						// document.getElementById("price").innerHTML=data;
+							if(data==1){
+								alert("预约成功");
+							}
+						}	
+					}
+			</script>
+	</head>
+	<body onload="aaa();autoshowimg();">
+
+
+
+
+		<div id="header">
+			<div id="toplist">
+				<ul>
+					<a id="lilogo" href="#">简租房<small>Simple.com</small></a>
+					<li style="padding-left: 40px;"><a href="#" class="menu2">首页</a></li>
+					<div class="menu1">
+						<a href="#" class="menu2">二手房</a>
+						<div class="menu1-minmenu">
+							<a href="#">在售房源</a>
+							<a href="#">优选资源</a>
+							<a href="#">排行榜</a>
+						</div>
+					</div>
+					<div class="menu1">
+						<a href="#" class="menu2">家具精装</a>
+						<div class="menu1-minmenu">
+							<a href="#">家装案例</a>
+							<a href="#">家装案例</a>
+							<a href="#">免费设计</a>
+							<a href="#">免费验房</a>
+						</div>
+					</div>
+					<div class="menu1">
+						<a href="#" class="menu2">业主论坛</a>
+						<div class="menu1-minmenu">
+							<a href="#">精华帖</a>
+							<a href="#">业主活动</a>
+							<a href="#">房东群</a>
+						</div>
+					</div>
+					<div class="menu1">
+						<a href="#" class="menu2">房产百科</a>
+						<div class="menu1-minmenu">
+							<a href="#">房产快讯</a>
+							<a href="#">房产问答</a>
+							<a href="#">房产知识</a>
+							<a href="#">房产圈</a>
+						</div>
+					</div>
+					<div class="menu1">
+						<a href="#" class="menu2">更多</a>
+						<div class="menu1-minmenu">
+							<a href="#">产业</a>
+							<a href="#">海外房景</a>
+							<a href="#">加盟链接</a>
+							<a href="#">移动App</a>
+						</div>
+					</div>
+					<div style="float: right;">
+						<li><a href="http://localhost/RoomManage/index.jsp">登陆</a></li>
+						<li><a href="#news">注册</a></li>
+					</div>
+				</ul>
+			</div>
+
+		</div>
+
+
+
+<!-- 轮播图 -->
+		<script type="text/javascript">
+			var mylunboindex = 0; //初始显示第一张
+			var mylunbobox = document.getElementsByClassName("mylunbo");
+			var dots = document.getElementsByClassName("dot");
+			showimg(mylunboindex);
+
+			function dotshow(n) {
+				showimg(mylunboindex = n);
+			}
+
+			function torightimg() {
+				mylunboindex++;
+				showimg(mylunboindex);
+			}
+
+			function toleftimg() {
+				mylunboindex--;
+				showimg(mylunboindex);
+			}
+			//参数不要设为全局变量一样
+			function showimg(n) {
+
+				//首先重置所有display
+				for (var i = 0; i < mylunbobox.length; i++) {
+					mylunbobox[i].style.display = "none";
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+
+				//右边越界
+				if (n > mylunbobox.length - 1) {
+					mylunboindex = 0
+				}
+				//左边越界
+				if (n < 0) {
+					mylunboindex = 2
+				}
+				dots[mylunboindex].className += " active";
+				mylunbobox[mylunboindex].style.display = "block";
+
+			}
+
+			function autoshowimg() {
+			
+				showimg(mylunboindex);
+				mylunboindex++;
+				setTimeout(autoshowimg, 3000);
+			}
+
+			window.addEventListener('hashchange', function() {
+				switch (location.hash) {
+					case "#chooselist2":
+						document.body.className = "chooselist2";
+						break;
+					case "#chooselist3":
+						document.body.className = "chooselist3";
+						break;
+					default:
+						document.body.className = "chooselist1";
+				}
+			}, false);
+		</script>
+
+		<div style="width: 100%;">
+			<div class="lunbo">
+				<div class="mylunbo fade"><img src="girl.png" style="height: 400px;width: 100%;"></div>
+				<div class="mylunbo fade"><img src="girl1.jpg" style="height: 400px;width: 100%;"></div>
+				<div class="mylunbo fade"><img src="2.jpg" style="height: 400px;width: 100%;"></div>
+				<a class="toleft" onclick="toleftimg()">❮</a>
+				<a class="toright" onclick="torightimg(1)">❯</a>
+			</div>
+			<div style="position: absolute;text-align:center;z-index: 1;top:430px;left: 50%;">
+				<span class="dot" onclick="dotshow(0)"></span>
+				<span class="dot" onclick="dotshow(1)"></span>
+				<span class="dot" onclick="dotshow(2)"></span>
+			</div>
+		</div>
+
+
+		<div id="chooselist">
+
+			<!-- 激活的菜单样式为  active 类 -->
+			<!-- 为了阻止链接在点击时跳转，我们使用了 "prevent" 修饰符 (preventDefault 的简称)。 -->
+
+			<nav v-bind:class="active" style="width: 100%;" v-on:click.prevent>
+
+				<!-- 当菜单上的链接被点击时，我们调用了 makeActive 方法, 该方法在 Vue 实例中创建。 -->
+
+				<a href="#" class="onehandhouse" v-on:click="makeActive('onehandhouse')">onehandhouse</a>
+				<a href="#" class="twohandhouse" v-on:click="makeActive('twohandhouse')">twohandhouse</a>
+				<a href="#" class="threehandhouse" v-on:click="makeActive('threehandhouse')">threehandhouse</a>
+				<a href="#" class="fourhandhouse" v-on:click="makeActive('fourhandhouse')">fourhandhouse</a>
+			</nav>
+
+
+			<!-- 以下 "active" 变量会根据当前选中的值来自动变换 -->
+			<form v-cloak>
+				<ul >
+					<!-- 循环输出数据 -->
+					<li v-for="article in filteredArticles">
+						<!-- 卡片 -->
+						<div class="card" style="border-bottom: dimgrey 2px solid;width: 65%;height: 150px;margin:0 auto;">
+							<img v-bind:src="article.image" style="float: left;width: 300px;height: 147px;"/>
+							<a v-bind:href="article.url" class="carda">{{article.title}}</a><br>
+							<a v-bind:href="article.smallurl1" class="carda1"><b>{{article.smalltitle1}}</b></a>
+							<a v-bind:href="article.smallurl2" class="carda2"><b>{{article.smalltitle2}}</b></a>
+							<a v-bind:href="article.smallurl3" class="carda3"><b>{{article.smalltitle3}}</b></a>
+							
+							<span style="font-weight: 800;font-size: 30px;color:black;float: right;">{{article.price}}</span>
+						</div>
+						
+					</li>
+				</ul>
+			</form>
+
+
+
+		</div>
+
+		<script>
+			// 创建一个新的 Vue 实例
+			var demo = new Vue({
+				// DOM 元素，挂载视图模型
+				el: '#chooselist',
+
+				// 定义属性，并设置初始值
+				data: {
+					active: 'onehandhouse',
+					articles: [
+						//一手房
+						{  //state1：房源类型  smalltitle：小标签
+							title: "Mercury House",
+							url: "shop.html?188888888",
+							image: "icons_room/icons_room1/1-1.jpg",
+							state1: "onehandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"全款",
+							smallurl3:"",
+							price:"188888888元"
+						},
+						{
+							title: "Venus—Venus",
+							url: "",
+							image: "icons_room/icons_room2/2-1.jpg",
+							state1: "onehandhouse",
+							smalltitle1:"北师大",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"两房两厅",
+							smallurl2:"",
+							smalltitle3:"全款",
+							smallurl3:"",
+							price:"233333333元"
+						},
+						{
+							title: "Earth—Earth",
+							url: "",
+							image: "icons_room/icons_room3/3-1.jpg",
+							state1: "onehandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"带装修",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "gonna to Mars",
+							url: "",
+							image: "icons_room/icons_room4/4-1.jpg",
+							state1: "onehandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "Jupiter-Jupiter ",
+							url: "",
+							image: "icons_room/icons_room5/5-1.jpg",
+							state1: "onehandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "onehandhouse6",
+							url: "",
+							image: "icons_room/icons_room6/6-1.jpg",
+							state1: "onehandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						//二手房
+						{
+							title: "Neptune-Neptune",
+							url: "shop1.html?30000",
+							image: "icons_room/icons_room1/1-3.jpg",
+							state1: "twohandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"30000元/每月"
+						},
+						{
+							title: "twohandhouse2",
+							url: "",
+							image: "icons_room/icons_room2/2-3.jpg",
+							state1: "twohandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "twohandhouse3",
+							url: "",
+							image: "icons_room/icons_room3/3-2.jpg",
+							state1: "twohandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "twohandhouse4",
+							url: "",
+							image: "icons_room/icons_room4/4-3.jpg",
+							state1: "twohandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "twohandhouse5",
+							url: "",
+							image: "icons_room/icons_room5/5-3.jpg",
+							state1: "twohandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "twohandhouse6",
+							url: "",
+							image: "icons_room/icons_room6/6-1.jpg",
+							state1: "twohandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						//三手房
+						{
+							title: "threehandhouse1",
+							url: "shop2.html?3000",
+							image: "icons_room/icons_room1/1-6.jpg",
+							state1: "threehandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"3000元/每月"
+						},
+						{
+							title: "threehandhouse2",
+							url: "",
+							image: "icons_room/icons_room2/2-6.jpg",
+							state1: "threehandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "threehandhouse3",
+							url: "",
+							image: "icons_room/icons_room3/3-8.jpg",
+							state1: "threehandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "threehandhouse4",
+							url: "",
+							image: "icons_room/icons_room4/4-8.jpg",
+							state1: "threehandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "threehandhouse5",
+							url: "",
+							image: "icons_room/icons_room5/5-6.jpg",
+							state1: "threehandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "threehandhouse6",
+							url: "",
+							image: "icons_room/icons_room6/6-7.jpg",
+							state1: "threehandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						//四手房
+						{
+							title: "fourhandhouse1",
+							url: "",
+							image: "icons_room/icons_room1/1-1.jpg",
+							state1: "fourhandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "fourhandhouse2",
+							url: "",
+							image: "icons_room/icons_room1/1-1.jpg",
+							state1: "fourhandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "fourhandhouse3",
+							url: "",
+							image: "icons_room/icons_room1/1-1.jpg",
+							state1: "fourhandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "fourhandhouse4",
+							url: "",
+							image: "icons_room/icons_room1/1-1.jpg",
+							state1: "fourhandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "fourhandhouse5",
+							url: "",
+							image: "icons_room/icons_room1/1-1.jpg",
+							state1: "fourhandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+						{
+							title: "fourhandhouse6",
+							url: "",
+							image: "icons_room/icons_room1/1-1.jpg",
+							state1: "fourhandhouse",
+							smalltitle1:"北理珠",
+							smallurl1:"http://www.bitzh.edu.cn/",
+							smalltitle2:"三房两厅",
+							smallurl2:"",
+							smalltitle3:"整租",
+							smallurl3:"",
+							price:"10000元/每月"
+						},
+					]
+				},
+				computed: {
+					filteredArticles: function() {
+						var articles_array = this.articles,
+							mystate1 = this.active;
+						articles_array = articles_array.filter(function(item) {
+							if (item.state1.toLowerCase().indexOf(mystate1) !== -1) {
+								return item;
+							}
+						})
+						return articles_array;
+					}
+				},
+				// 点击菜单使用的函数
+				methods: {
+					makeActive: function(item) {
+						this.active = item;
+					}
+				}
+			});
+		</script>
+
+
+
+		<div class="foot">
+			<ul style="list-style-type: none;text-align: center;color: white;">
+				<li>简租网 版权所有 2019-2080 深ICP备8888888 </li>
+				<li>地址：北京理工大学珠海学院 电话：0755-123123123 E-mail:jianzu@163.com</li>
+				<li> powered by MetInfo 5.2.10 ?2019-2080 www.simple.com</li>
+			</ul>
+		</div>
+
+
+
+	</body>
+</html>
