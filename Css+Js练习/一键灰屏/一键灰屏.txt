@@ -1,0 +1,50 @@
+        if (document.querySelector('#my_msg') === null) {
+            if (document.querySelector('#my_video') === null) {
+                var my_msg = document.createElement('p');
+                my_msg.innerText = '正在去世';
+                my_msg.setAttribute('id', 'my_msg');
+                my_msg.setAttribute('style',
+                    'position:fixed;top:0;left:0;width:130px;height:30px;line-height:30px;text-align:center;background-color:#000;color:#FFF;font-size:26px;z-index:99999999'
+                );
+                document.body.appendChild(my_msg);
+                var my_played = true;
+                var my_video = document.createElement('video');
+                my_video.setAttribute('id', 'my_video');
+                my_video.setAttribute('autoplay', '');
+                my_video.setAttribute('name', 'media');
+                my_video.addEventListener('canplaythrough', function () {
+                    my_msg.remove();
+                    document.body.setAttribute('style',
+                        'filter: grayscale(100%); -moz-filter: grayscale(100%); -o-filter: grayscale(100%); -webkit-filter: grayscale(100%);'
+                    )
+                });
+
+                my_video.addEventListener('pause', function () {
+                    document.body.setAttribute('style', '');
+                    my_played = false
+                });
+                my_video.addEventListener('play', function () {
+                    document.body.setAttribute('style',
+                        'filter: grayscale(100%); -moz-filter: grayscale(100%); -o-filter: grayscale(100%); -webkit-filter: grayscale(100%);'
+                    );
+                    my_played = true
+                });
+                var my_source = document.createElement('source');
+                my_source.setAttribute('src',
+                    'https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcDVHUVdqS1ViZm5nLWwtTk5nMVlSVlFJRThJclE/ZT1HbFZ5VHE=.mp3'
+                );
+                my_source.setAttribute('type', 'audio/mpeg');
+                my_video.appendChild(my_source);
+                document.body.appendChild(my_video);
+
+            } else {
+
+                if (my_played) {
+                    document.querySelector('#my_video').pause()
+                } else {
+                    document.querySelector('#my_video').play()
+                }
+            }
+        }
+
+        void(0);
