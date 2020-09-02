@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(230, 10, 10, 0.835);
+    transition: background 1.2s ease;
+}
+
+#content {
+    width: 300px;
+}
+
+#content h1 {
+    font-weight: 900;
+    color: white;
+
+}
+
+#content p {
+    text-indent: 2em;
+    font-size: 20px;
+    color: white;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: white;
+    border: 2px solid rgb(255, 255, 255);
+    transition: background 1.2s ease;
+}
+
+img {
+    width: 100px;
+    height: 130px;
+}
+
+.box img:hover {
+    cursor: pointer;
+    transform: translateY(-20px);
+    transition: all 0.5s linear;
+}
