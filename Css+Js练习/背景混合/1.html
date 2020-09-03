@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
+    <style>
+        .one,
+        .two,
+        .three {
+            display: inline-block;
+            height: 400px;
+            width: 400px;
+            background-size: 100%;
+            background-color: rgba(141, 76, 33, 0.3);
+            background-image: url(./girl.jpg);
+        }
+
+        .one {
+            background-blend-mode: screen;
+        }
+
+        .two {
+            background-blend-mode: multiply;
+        }
+
+        .three {
+            background-blend-mode: overlay;
+        }
+    </style>
+</body>
+
+</html>
