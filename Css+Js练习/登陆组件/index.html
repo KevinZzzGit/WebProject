@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>登陆组件</title>
+</head>
+
+<body>
+    <section>
+
+
+        <div id="app">
+            <div id="loginBox">
+                <!-- 登陆框 -->
+                <div id="loginBox-login">
+
+                    <h2 id="title">Login</h2>
+
+                    <form action="">
+
+
+                        <div class="wrapper" style="margin-top: 30px;">
+                            <div class="input-data">
+                                <input type="text" required id="username">
+                                <div class="underline"></div>
+                                <label>用户名</label>
+                            </div>
+                        </div>
+
+                        <div class="wrapper" style="margin-top: 30px;">
+                            <div class="input-data">
+                                <input type="text" required id="password">
+                                <div class="underline"></div>
+                                <label>密码</label>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                </div>
+                <!-- 注册框 -->
+                <div id="loginBox-register">
+                    <h2 id="title">Register</h2>
+                    <form action="">
+                        <div class="wrapper" style="padding: 20px;">
+                            <div class="input-data">
+                                <input type="text" required id="username">
+                                <div class="underline"></div>
+                                <label>用户名</label>
+                            </div>
+                        </div>
+
+                        <div class="wrapper" style="padding: 20px;">
+                            <div class="input-data">
+                                <input type="text" required id="password">
+                                <div class="underline"></div>
+                                <label>密码</label>
+                            </div>
+                        </div>
+
+                        <div class="wrapper" style="padding: 20px;">
+                            <div class="input-data">
+                                <input type="text" required id="password">
+                                <div class="underline"></div>
+                                <label>验证码</label>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+                <!-- 遮罩层 -->
+                <div id="loginBox-shade">
+                    <img id="loginBox-changeBtn" src="./tkzr.png" alt="">
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <script>
+        function createBubble() {
+            const section = document.querySelector('section')
+
+            //设置块元素的大小，random设置随机数
+            const createElement = document.createElement('span')
+            var size = Math.random() * 60;
+            createElement.style.width = 20 + size + 'px';
+            createElement.style.height = 20 + size + 'px';
+            createElement.style.left = Math.random() * innerWidth + "px";
+            section.appendChild(createElement);
+
+            setTimeout(() => {
+                createElement.remove()
+            }, 4000)
+
+
+        }
+        //创建 500毫秒一个
+        setInterval(createBubble, 500)
+    </script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

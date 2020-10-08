@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: consolas; */
+    outline: none;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+body {
+    background: linear-gradient(-135deg, #edb6b6f5, #56a8ce);
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* background: #111; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* section h2 {
+    font-size: 10em;
+    color: #333;
+}
+
+section h2:hover {
+    cursor: pointer;
+    text-shadow: 3px 3px 10px snow;
+} */
+
+section span {
+    position: absolute;
+    bottom: -50px;
+    background: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: animate 4s linear infinite;
+}
+
+section span:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.25) translate(-60%, -70%);
+    background: radial-gradient(#fff, transparent);
+    border-radius: 50%;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0%);
+        opactity: 1;
+    }
+
+    99% {
+        opactity: 1;
+    }
+
+    100% {
+        transform: translateY(-1200%);
+        opactity: 0;
+    }
+}
+
+
+
+
+body section #loginBox {
+    min-width: 800px;
+    /* background: rgba(56, 132, 219, 0.979); */
+    background: linear-gradient(-135deg, #edb6b6f5, #56a8ce);
+    /* border: 3px solid black; */
+    box-shadow: 15px 15px 10px rgba(88, 83, 83, 0.829);
+}
+
+body #loginBox #loginBox-login,
+body #loginBox #loginBox-register {
+    float: left;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+
+
+
+}
+
+
+
+body #loginBox #loginBox-login h2,
+body #loginBox #loginBox-register h2 {
+    font-size: 35px;
+    color: white;
+    font-weight: 800;
+    line-height: 100px;
+}
+
+body #loginBox #loginBox-shade {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: url(./keqing.jpg);
+    background-size: 100% 100%;
+    left: 500px;
+}
+
+body #loginBox #loginBox-shade #loginBox-changeBtn {
+    position: inherit;
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    bottom: 65px;
+    background-size: 100% 100%;
+    transform: rotate(45deg);
+    background-image: url('./tkzr.png');
+    transition: transform 0.5s linear;
+    animation: BtnLeft 1.1s linear infinite;
+
+}
+
+body #loginBox #loginBox-shade #loginBox-changeBtn:hover {
+    cursor: pointer;
+}
+
+@keyframes BtnLeft {
+    0% {
+        left: 20px;
+    }
+
+    50% {
+        left: 40px;
+    }
+
+    100% {
+        left: 20px;
+    }
+}
+
+@keyframes BtnRight {
+    0% {
+        left: 420px;
+    }
+
+    50% {
+        left: 400px;
+    }
+
+    100% {
+        left: 420px;
+    }
+}
+
+
+
+.wrapper {
+    margin: 10px auto;
+    width: 300px;
+    background: #fff;
+    padding: 25px;
+    box-shadow: 3px 3px 10px rgba(253, 233, 233, 0.829);
+    border-radius: 10px;
+}
+
+
+
+
+.wrapper .input-data {
+    height: 30px;
+    width: 100%;
+    position: relative;
+
+}
+
+
+.wrapper .input-data input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+    outline: none;
+}
+
+
+.input-data input:focus~label,
+.input-data input:valid~label {
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #4158d0;
+}
+
+.wrapper .input-data label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+
+    transition: all 0.3s ease;
+}
+
+.wrapper .input-data .underline {
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    width: 100%;
+}
+
+.wrapper .input-data .underline::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background: #4158d0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus~.underline::before,
+.input-data input:valid~.underline::before {
+    transform: scaleX(1);
+}
