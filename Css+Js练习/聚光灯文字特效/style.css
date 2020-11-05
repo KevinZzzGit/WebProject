@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+}
+h1{
+    position: relative;
+
+    text-transform: uppercase;
+    color: #333333;
+    /* 1rem=16px */
+    font-size: 8rem;
+}
+h1::after{
+    content: 'spotlight';
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 文字颜色透明 */
+    color:transparent;
+
+    background-image: linear-gradient(to right,
+    #c23616,#192a56,#00d2d3,yellow,#6d214f,#2e86de,#4cd137,#e84118
+    );
+    /* 背景绘制区域 当值为text时，表示设置了文字的镂空效果，但前提时文字颜色透明 */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* 裁切来创建可显示区域 */
+    clip-path: circle(100px at 0% 50%);
+    animation:  move 5s infinite;
+}
+@keyframes move{
+    0%{clip-path: circle(100px at 0% 50%);}
+    50%{clip-path: circle(100px at 100% 50%);}
+    100%{clip-path: circle(100px at 0% 50%);}
+}
